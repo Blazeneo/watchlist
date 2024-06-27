@@ -1,6 +1,6 @@
 
 import styled from 'styled-components';
-//import Navbarcss from './navbar.module.css';
+import { NavLink, Outlet } from "react-router-dom";
 
 const Nav=styled.div `
 width: 100%;
@@ -19,42 +19,34 @@ font-size: xx-large;
 `;
 
 
-const CartImg = styled.img`
-    height: 40px;
-    margin-right: 20px;
-    
-`;
 
-const CartIconContainer = styled.div`
-    position: relative;
-    cursor: pointer;
-`;
 
-const CartCount = styled.div`
-    background: ${(props)=>(props.color)};
-    border-radius: 50%;
-    padding: 4px 8px;
-    position: absolute;
-    right: 10px;
-    top: -5px;
-    font-size: 12px;
-`;
 
-function Navbar (props){
+
+
+
+function Navbar (){
     
 
-        const {cartCount} = props;
+       // const {cartCount} = props;
         
         return(
             <>
+            <div>
             <Nav>
-            <Title>Title</Title>
-            <CartIconContainer>
-                <CartImg  alt="cart-icon" src="https://cdn-icons-png.flaticon.com/128/726/726496.png"/>
-                <CartCount color ='lightblue'>{cartCount}</CartCount>
-                {/* < span className={Navbarcss.CartCount}>0</span> */}
-            </CartIconContainer>
+            <Title>Watchlist</Title>
+            <Title>
+            <NavLink isactiveclassname=".active" to="/">
+          Home
+        </NavLink></Title><Title>
+        <NavLink isactiveclassname=".active" to="/addmovie">
+          Add Movie
+        </NavLink></Title>
+           
             </Nav>
+                
+                <Outlet /></div>
+           
             
             </>
         )

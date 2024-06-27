@@ -1,19 +1,25 @@
-
+import { useSelector,useDispatch } from "react-redux";
 import Moviecard from "./moviecard";
+import { movieSelector} from "./redux/moviereducer";
 
-function Movielist (props){
+function Movielist (){
+        const movies   =useSelector(movieSelector);
+        const dispatch = useDispatch();
+
+      
     
    
     
-   
-
+     
+     
     
 
-        const {movies ,addStars,revStars,favorite,handleCart} =props;
+       
+       
          return  (
 
             <>
-            {movies.map((movie,index)=><Moviecard key={index} data= {movie} addStars ={addStars} revStars ={revStars} favorite ={favorite} handleCart={handleCart}/>)}
+            {movies.map((movie,index)=><Moviecard key={index} data= {movie} />)}
          
         
             </>

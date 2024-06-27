@@ -109,11 +109,12 @@ footer.starCount {
   color: #fff;
   margin: 5px;
 }
-.cart-btn{
+.del{
   
-      background-color: #251bb1;
+      /* background-color: #251bb1; */
       color: #fff;
-      margin: 5px;
+      margin: 1px;
+      width: 20%;
     
 }
 .uncart-btn{
