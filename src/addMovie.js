@@ -15,7 +15,7 @@ function AddMovieForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Create new movie object
+    
     const newMovie = {
       title,
       plot,
@@ -26,10 +26,10 @@ function AddMovieForm() {
       poster,
     };
 
-    // Dispatch addMovie action
+    
     dispatch(addMovie(newMovie));
 
-    // Reset form fields (if needed)
+    
     setTitle('');
     setPlot('');
     setYear(0);

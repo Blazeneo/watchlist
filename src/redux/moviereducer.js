@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 import { movies } from "../moviesData";
-import { db } from "../Db";
+
 
 
 const initialstate = {movies};
