@@ -4,6 +4,7 @@ import { movies } from "../moviesData";
 
 
 
+
 const initialstate = {movies};
 
 
@@ -11,7 +12,8 @@ const movieSlice = createSlice({
     name: 'movies',
     initialState:initialstate,
     reducers: {
-        addMovie:async (state, action) => {
+        addMovie: (state, action) => {
+          console.log(action.payload)
        state.movies.push(action.payload);
        
       },
